@@ -1,0 +1,20 @@
+# Ignore data files and DVC cache
+data/
+.dvc/cache/
+.dvc/dump
+
+#ignore python cache
+*.pyc
+venv/
+.env
+
+#ignore terraform state and secrets
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/*.tfvars
+
+#ignore docker and local configs
+*.log
+.env
+" > .gitignore
