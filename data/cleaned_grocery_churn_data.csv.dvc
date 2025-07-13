@@ -1,0 +1,5 @@
+outs:
+- md5: 7fb7bbf1e3e913e6321fd42222fb87c4
+  size: 14023269
+  hash: md5
+  path: cleaned_grocery_churn_data.csv
