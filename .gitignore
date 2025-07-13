@@ -1,5 +1,4 @@
 # Ignore data files and DVC cache
-data/
 .dvc/cache/
 .dvc/dump
 
