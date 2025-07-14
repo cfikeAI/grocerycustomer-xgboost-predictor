@@ -1,7 +1,6 @@
 # Ignore data files and DVC cache
 .dvc/cache/
 .dvc/dump
-data/
 models/
 reports/
 
