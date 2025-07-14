@@ -55,11 +55,11 @@ jobs:
         dvc repro train_model -f
         git config --global user.name "cfikeAI"
         git config --global user.email "cfike607@gmail.com"
-        git add dvc.lock dvc.yaml .gitignore
-        git commit -m "Retrained model and updated artifacts via GitHub Actions"
+        git add dvc.lock data/cleaned_grocery_churn_data.csv.dvc dvc.yaml .gitignore || true
+        git commit -m "Retrained model and updated artifacts via GitHub Actions" || true
         dvc push
         git remote set-url origin https://cfikeAI:${GH_PAT}@github.com/cfikeAI/grocerycustomer-xgboost-predictor.git
-        git push origin HEAD:main
+        git push origin HEAD:main 
 
         
 
