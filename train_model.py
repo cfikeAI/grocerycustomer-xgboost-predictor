@@ -3,7 +3,7 @@
 
 # In[31]:
 
-
+#test
 
 import pandas as pd
 import numpy as np
@@ -15,6 +15,7 @@ from sklearn.metrics import classification_report, roc_auc_score
 import xgboost as xgb
 import joblib
 import mlflow
+import mlflow.xgboost
 import os
 
 
@@ -135,6 +136,7 @@ print(X.dtypes)
 
 
 # Define and tune XGBoost
+mlflow.set_experiment("Grocery_Churn_Prediction") #set experiment name
 xgb_model = xgb.XGBClassifier(random_state=42, eval_metric='logloss', enable_categorical=True)
 param_grid = {
     'n_estimators': [100, 200, 300],
