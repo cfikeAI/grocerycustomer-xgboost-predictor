@@ -1,5 +1,0 @@
-outs:
-- md5: d04ca14238edf95fe44d26da2aace9b9
-  size: 10981
-  hash: md5
-  path: churn_distribution.png

@@ -1,0 +1,12 @@
+stages:
+  train_model:
+    cmd: python train_model.py
+    deps:
+    - data/cleaned_grocery_churn_data.csv
+    - train_model.py
+    outs:
+    - models/churn_model.pkl
+    - models/model_features.csv
+    - models/scaler.pkl
+    - reports/churn_distribution.png
+    - reports/correlation_matrix.png

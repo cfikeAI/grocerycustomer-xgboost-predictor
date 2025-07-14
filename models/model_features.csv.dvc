@@ -1,5 +1,0 @@
-outs:
-- md5: 4c43b542c56b9bb7707921a6d46631ee
-  size: 919
-  hash: md5
-  path: model_features.csv
