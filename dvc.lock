@@ -1,0 +1,34 @@
+schema: '2.0'
+stages:
+  train_model:
+    cmd: python train_model.py
+    deps:
+    - path: data/cleaned_grocery_churn_data.csv
+      hash: md5
+      md5: 395163a1e2e619bbaacbef64b3f8dde7
+      size: 14018887
+    - path: train_model.py
+      hash: md5
+      md5: 55642b19272a5814f86e0738b2d4da8d
+      size: 4615
+    outs:
+    - path: models/churn_model.pkl
+      hash: md5
+      md5: e35c7745839dcca00c03601a22fc8519
+      size: 354735
+    - path: models/model_features.csv
+      hash: md5
+      md5: 5dabb87a66c0c0efb7e3722ff6057289
+      size: 922
+    - path: models/scaler.pkl
+      hash: md5
+      md5: 137bf8c55a995487b951740c8fe203d3
+      size: 1463
+    - path: reports/churn_distribution.png
+      hash: md5
+      md5: d04ca14238edf95fe44d26da2aace9b9
+      size: 10981
+    - path: reports/correlation_matrix.png
+      hash: md5
+      md5: fa1c5ac2b7be2907be09bf91152534ef
+      size: 170716
