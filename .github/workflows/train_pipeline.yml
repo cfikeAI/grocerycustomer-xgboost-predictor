@@ -51,8 +51,8 @@ jobs:
         python train_model.py
     - name: Push the new model & artifacts to Azure
       run: |
-        dvc add models/churn_model.pkl
-        dvc add models/scaler.pkl
+        dvc commit models/churn_model.pkl
+        dvc commit models/scaler.pkl
         dvc add data/cleaned_grocery_churn_data.csv
         git config --global user.name "github-actions"
         git config --global user.email "actions@github.com"
