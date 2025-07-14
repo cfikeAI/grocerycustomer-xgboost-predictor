@@ -1,0 +1,9 @@
+digest: 344feb57
+name: dataset
+profile: '{"features_shape": [28674, 41], "features_size": 1175634, "features_nbytes":
+  4702536}'
+schema: '{"mlflow_tensorspec": {"features": "[{\"type\": \"tensor\", \"tensor-spec\":
+  {\"dtype\": \"float32\", \"shape\": [-1, 41]}}]", "targets": null}}'
+source: '{"tags": {"mlflow.user": "Apollo", "mlflow.source.name": "c:/Users/Apollo/Documents/_MLOps-Journey-Notes/grocery-churn-xgboost/train_model2.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "8e55b87b9fe2fb3c75946f09abc6a9a9f155deaf"}}'
+source_type: code

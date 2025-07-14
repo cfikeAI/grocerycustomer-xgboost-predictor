@@ -1,0 +1,6 @@
+[core]
+    remote = azureremote
+['remote "azureremote"']
+    url = azure://dvcstore
+    account_name = gorcerymlopsstorage
+    sas_token = se=2030-01-01T00%3A00Z&sp=racwdl&sv=2022-11-02&sr=c&sig=3ZFc%2BlfqXqaKDsed1JItF/7UZbFAulzAjKdzxMudx9I%3D

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Apollo/Documents/_MLOps-Journey-Notes/grocery-churn-xgboost/mlruns/297670674787785522/309f88e1bf144f63975e3df0dfbae86a/artifacts
+end_time: 1752516567355
+entry_point_name: ''
+experiment_id: '297670674787785522'
+lifecycle_stage: active
+run_id: 309f88e1bf144f63975e3df0dfbae86a
+run_name: zealous-lynx-720
+run_uuid: 309f88e1bf144f63975e3df0dfbae86a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752516510913
+status: 3
+tags: []
+user_id: Apollo
