@@ -12,6 +12,7 @@ jobs:
     env: 
       AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
       AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
+      GH_PAT: ${{ secrets.GH_PAT }}  # GitHub Personal Access Token for pushing changes
 
 
     steps:
@@ -57,6 +58,7 @@ jobs:
         git add dvc.lock dvc.yaml .gitignore
         git commit -m "Retrained model and updated artifacts via GitHub Actions"
         dvc push
-        git push
+        git push https://cfikeAI:${GH_PAT}@github.com/cfikeAI/grocerycustomer-xgboost-predictor.git HEAD:main
+
         
 
