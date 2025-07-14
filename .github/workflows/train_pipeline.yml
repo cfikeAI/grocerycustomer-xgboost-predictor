@@ -32,8 +32,8 @@ jobs:
 
     - name: Configure Azure credentials for DVC
       run: |
-        dvc remote modify azure-remote account_name $AZURE_STORAGE_ACCOUNT
-        dvc remote modify azure-remote account_key $AZURE_STORAGE_KEY
+        dvc remote modify azureremote account_name $AZURE_STORAGE_ACCOUNT
+        dvc remote modify azureremote account_key $AZURE_STORAGE_KEY
 
     - name: Pull latest data/model from Azure via DVC
       run: |
