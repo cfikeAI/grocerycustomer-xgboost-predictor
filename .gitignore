@@ -16,4 +16,4 @@ terraform/*.tfvars
 #ignore docker and local configs
 *.log
 .env
-" > .gitignore
+" > .gitignore"mlruns/" 
