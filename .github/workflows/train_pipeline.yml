@@ -58,7 +58,8 @@ jobs:
         git add dvc.lock dvc.yaml .gitignore
         git commit -m "Retrained model and updated artifacts via GitHub Actions"
         dvc push
-        git push https://cfikeAI:${GH_PAT}@github.com/cfikeAI/grocerycustomer-xgboost-predictor.git HEAD:main
+        git remote set-url origin https://cfikeAI:${GH_PAT}@github.com/cfikeAI/grocerycustomer-xgboost-predictor.git
+        git push origin HEAD:main
 
         
 
