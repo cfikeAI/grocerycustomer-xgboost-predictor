@@ -59,7 +59,7 @@ jobs:
         git commit -m "Retrained model and updated artifacts via GitHub Actions" || true
         dvc push
         git remote set-url origin https://cfikeAI:${GH_PAT}@github.com/cfikeAI/grocerycustomer-xgboost-predictor.git
-        git push origin HEAD:main 
+        git push origin HEAD:main  
 
         
 
