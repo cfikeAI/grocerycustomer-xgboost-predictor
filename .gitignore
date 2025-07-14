@@ -1,11 +1,18 @@
 # Ignore data files and DVC cache
 .dvc/cache/
 .dvc/dump
+data/
+models/
+reports/
 
 #ignore python cache
 *.pyc
 venv/
 .env
+
+
+# MLflow
+mlruns/
 
 #ignore terraform state and secrets
 terraform/.terraform/
@@ -17,3 +24,18 @@ terraform/*.tfvars
 *.log
 .env
 " > .gitignore"mlruns/" 
+
+# Python/venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+env/
+venv/
+*.egg-info/
+
+#OS
+.DS_Store
+Thumbs.db
