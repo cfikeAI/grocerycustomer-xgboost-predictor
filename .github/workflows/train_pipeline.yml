@@ -13,6 +13,7 @@ jobs:
       AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
       AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
 
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -40,6 +41,11 @@ jobs:
         dvc remote modify azureremote account_name $AZURE_STORAGE_ACCOUNT
         dvc remote modify azureremote account_key $AZURE_STORAGE_KEY
 
+    - name: Pull latest data/model from Azure via DVC
+      run: |
+        dvc pull
+        
+  
     - name: Train model and log to MLFlow
       run: |
         python train_model.py
