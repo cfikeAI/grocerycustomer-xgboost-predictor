@@ -1,0 +1,56 @@
+name: MLOps Training Pipeline
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  train: 
+    runs-on: ubuntu-latest
+
+    env: 
+      AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+      AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install dvc[azure] mlflow xgboost scikit-learn matplotlib seaborn pandas joblib
+
+    - name: Configure Azure credentials for DVC
+      run: |
+        dvc remote modify azure-remote account_name $AZURE_STORAGE_ACCOUNT
+        dvc remote modify azure-remote account_key $AZURE_STORAGE_KEY
+
+    - name: Pull latest data/model from Azure via DVC
+      run: |
+        dvc remote modify azure-remote account_name $AZURE_STORAGE_ACCOUNT
+        dvc remote modify azure-remote account_key $AZURE_STORAGE_KEY
+
+    - name: Train model and log to MLFlow
+      run: |
+        python train_model.py
+    - name: Push the new model & artifacts to Azure
+      run: |
+        dvc add models/churn_model.pkl
+        dvc add models/scaler.pkl
+        dvc add data/cleaned_grocery_churn_data.csv
+        git config --global user.name "github-actions"
+        git config --global user.email "actions@github.com"
+        git add models/*.dvc data /*.dvc .gitignore
+        git commit -m "Retrained model and updated artifacts via GitHub Actions"
+        dvc push
+        git push
+        
+
