@@ -5,30 +5,30 @@ stages:
     deps:
     - path: data/cleaned_grocery_churn_data.csv
       hash: md5
-      md5: 395163a1e2e619bbaacbef64b3f8dde7
-      size: 14018887
+      md5: cb9c35269d34d6a10df47f67a95a99da
+      size: 13983043
     - path: train_model.py
       hash: md5
-      md5: 55642b19272a5814f86e0738b2d4da8d
-      size: 4615
+      md5: eec9b29418e1ff1d9d3dc3ddd6a523ad
+      size: 4528
     outs:
     - path: models/churn_model.pkl
       hash: md5
-      md5: e35c7745839dcca00c03601a22fc8519
-      size: 354735
+      md5: df7bb78e6cba6cd044c4408335f0aaed
+      size: 756277
     - path: models/model_features.csv
       hash: md5
-      md5: 5dabb87a66c0c0efb7e3722ff6057289
-      size: 922
+      md5: d92377180c43622c44a36a7f5619ec6d
+      size: 880
     - path: models/scaler.pkl
       hash: md5
       md5: 137bf8c55a995487b951740c8fe203d3
       size: 1463
     - path: reports/churn_distribution.png
       hash: md5
-      md5: d04ca14238edf95fe44d26da2aace9b9
-      size: 10981
+      md5: 4fb9df3fffd77ca97043c63700c559b2
+      size: 12179
     - path: reports/correlation_matrix.png
       hash: md5
-      md5: fa1c5ac2b7be2907be09bf91152534ef
-      size: 170716
+      md5: 114a5d56053f91ca3842f05b82255c34
+      size: 186247
