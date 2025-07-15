@@ -13,7 +13,7 @@ Serve predictions with **FastAPI** (Dockerized)
 Ready for **AKS deployment** (Terraform)
 
 ### Visual Diagram:
-![Architecture Diagram](assets/architecture.png)
+![Architecture Diagram](assets/system_diagram.png)
 
 ## **Setup Instructions**
 
