@@ -12,24 +12,8 @@ CI/CD pipeline: Auto-retrain → Push to remote → Deploy
 Serve predictions with **FastAPI** (Dockerized)  
 Ready for **AKS deployment** (Terraform)
 
-## **Architecture**
-
-+---------+     +-------+     +--------+
-|  Data   | --> |  DVC  | --> | Train  |
-+---------+     +-------+     +--------+
-                              |
-                              v
-                          +--------+
-                          | MLflow |
-                          +--------+
-                              |
-                              v
-+---------+   +--------+   +----------------+   +---------------+
-| FastAPI |-->| Docker |-->| Azure ACR/AKS  |-->| Monitoring    |
-+---------+   +--------+   +----------------+   | Grafana       |
-                                                +---------------+
-
-
+### Visual Diagram:
+![Architecture Diagram](assets/architecture.png)
 
 ## **Setup Instructions**
 
