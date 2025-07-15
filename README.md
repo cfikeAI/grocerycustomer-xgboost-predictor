@@ -14,11 +14,24 @@ Ready for **AKS deployment** (Terraform)
 
 ## **Architecture**
 
-Data → DVC → Train (XGBoost) → MLflow Logging → Model Registry
-↓
-FastAPI + Docker → Azure Container Registry → Azure Kubernetes Service
-↓
-Monitoring: Prometheus + Grafana
+        +---------+        +-----------+        +--------+
+        |  Data   | -----> |   DVC     | -----> | Train  |
+        +---------+        +-----------+        +--------+
+                                                  |
+                                                  v
+                                            +-------------+
+                                            |   MLflow    |
+                                            +-------------+
+                                                  |
+                                                  v
+   +------------+    +-----------+    +---------------+
+   |  FastAPI   | -> |  Docker   | -> | Azure ACR/AKS |
+   +------------+    +-----------+    +---------------+
+                                                  |
+                                                  v
+                                        +--------------------+
+                                        | Monitoring: Grafana |
+                                        +--------------------+
 
 
 ## **Setup Instructions**
