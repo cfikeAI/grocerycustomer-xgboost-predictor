@@ -13,7 +13,21 @@ Serve predictions with **FastAPI** (Dockerized)
 Ready for **AKS deployment** (Terraform)
 
 ### Visual Diagram:
-![Architecture Diagram](assets/system_diagram.png)
++---------+     +-------+     +-------------+
+|  Data   | --> |  DVC  | --> | Model Train |
++---------+     +-------+     +-------------+
+                                |
+                                v
+                            +--------+
+                            | MLflow |
+                            +--------+
+                                |
+                                v
++---------+   +--------+   +----------------+   +----------------+
+| FastAPI |-->| Docker |-->| Azure ACR/AKS  |-->| Monitoring     |
++---------+   +--------+   +----------------+   | (Grafana)      |
+                                                +----------------+
+
 
 ## **Setup Instructions**
 
