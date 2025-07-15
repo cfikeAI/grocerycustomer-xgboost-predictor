@@ -8,11 +8,11 @@ import os
 app = FastAPI(title="Grocery Customer Churn Prediction API")
 
 # === Load model ===
-model_path = os.path.join("..", "models", "churn_model.pkl")
+model_path = os.path.join("models", "churn_model.pkl")
 model = joblib.load(model_path)
 
 # === Load features from CSV ===
-features_path = os.path.join("..", "models", "model_features.csv")
+features_path = os.path.join("models", "model_features.csv")
 feature_names = pd.read_csv(features_path, header=None).iloc[:, 0].tolist()
 
 
