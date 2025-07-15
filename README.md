@@ -6,11 +6,11 @@ End-to-end MLOps project to predict grocery customer churn using **XGBoost**, **
 ---
 
 ## Features
-✔ Train & track experiments with **MLflow**  
-✔ Data & model versioning with **DVC (Azure Blob Storage)**  
-✔ CI/CD pipeline: Auto-retrain → Push to remote → Deploy  
-✔ Serve predictions with **FastAPI** (Dockerized)  
-✔ Ready for **AKS deployment** (Terraform)
+Train & track experiments with **MLflow**  
+Data & model versioning with **DVC (Azure Blob Storage)**  
+CI/CD pipeline: Auto-retrain → Push to remote → Deploy  
+Serve predictions with **FastAPI** (Dockerized)  
+Ready for **AKS deployment** (Terraform)
 
 ## **Architecture**
 
