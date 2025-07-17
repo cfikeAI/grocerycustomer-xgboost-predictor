@@ -9,8 +9,8 @@ stages:
       size: 13983043
     - path: train_model.py
       hash: md5
-      md5: eec9b29418e1ff1d9d3dc3ddd6a523ad
-      size: 4528
+      md5: 94c242cbe6cd71fd6618c1229dd1eab0
+      size: 4544
     outs:
     - path: models/churn_model.pkl
       hash: md5
@@ -18,8 +18,8 @@ stages:
       size: 756277
     - path: models/model_features.csv
       hash: md5
-      md5: d92377180c43622c44a36a7f5619ec6d
-      size: 880
+      md5: 43699c5c5c67bcd75eea4de0f39c75f4
+      size: 878
     - path: models/scaler.pkl
       hash: md5
       md5: 47f508900ef4eedc7dfc883c66903e19
