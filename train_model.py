@@ -124,7 +124,7 @@ X = pd.get_dummies(X, drop_first=True)
 
 # In[52]:
 # Save final feature names used by model
-X.columns.to_series().to_csv("models/model_features.csv", index=False)
+X.columns.to_series().to_csv("models/model_features.csv", index=False, header = False)
 
 # Split data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)

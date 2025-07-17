@@ -13,7 +13,7 @@ model = joblib.load(model_path)
 
 # === Load features from CSV ===
 features_path = os.path.join("models", "model_features.csv")
-feature_names = pd.read_csv(features_path, header=None).iloc[:, 0].tolist()
+feature_names = pd.read_csv(features_path, header=None, index_col=False).iloc[:, 0].tolist()
 
 
 #Dynamic pydantic model creation
